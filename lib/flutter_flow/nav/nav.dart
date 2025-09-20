@@ -33,22 +33,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) => const HomePageWidget(),
+      errorBuilder: (context, state) => const LogInWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => const HomePageWidget(),
-        ),
-        FFRoute(
-          name: HomePageWidget.routeName,
-          path: HomePageWidget.routePath,
-          builder: (context, params) => const HomePageWidget(),
+          builder: (context, _) => const LogInWidget(),
         ),
         FFRoute(
           name: LogInWidget.routeName,
           path: LogInWidget.routePath,
           builder: (context, params) => const LogInWidget(),
+        ),
+        FFRoute(
+          name: HomePageWidget.routeName,
+          path: HomePageWidget.routePath,
+          builder: (context, params) => const HomePageWidget(),
         ),
         FFRoute(
           name: VideodetailsWidget.routeName,

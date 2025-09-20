@@ -207,19 +207,6 @@ class _LogInWidgetState extends State<LogInWidget>
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
-                                                if (responsiveVisibility(
-                                                  context: context,
-                                                  phone: false,
-                                                  tablet: false,
-                                                ))
-                                                  Container(
-                                                    width: 230.0,
-                                                    height: 16.0,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
                                                 Text(
                                                   'Crea  una cuenta',
                                                   textAlign: TextAlign.start,
@@ -769,9 +756,8 @@ class _LogInWidgetState extends State<LogInWidget>
                                                             .fromSTEB(0.0, 0.0,
                                                             0.0, 16.0),
                                                     child: FFButtonWidget(
-                                                      onPressed: () {
-                                                        print(
-                                                            'Button pressed ...');
+                                                      onPressed: () async {
+                                                        context.go('/homePage');
                                                       },
                                                       text: 'Crear cuenta',
                                                       options: FFButtonOptions(
@@ -1101,19 +1087,6 @@ class _LogInWidgetState extends State<LogInWidget>
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
-                                                if (responsiveVisibility(
-                                                  context: context,
-                                                  phone: false,
-                                                  tablet: false,
-                                                ))
-                                                  Container(
-                                                    width: 230.0,
-                                                    height: 16.0,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
                                                 Text(
                                                   '¡Bienvenido!',
                                                   textAlign: TextAlign.start,
@@ -1966,15 +1939,11 @@ class _LogInWidgetState extends State<LogInWidget>
               ),
               Align(
                 alignment: const AlignmentDirectional(0.01, -0.79),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8.0),
-                  child: SvgPicture.asset(
-                    'assets/images/Logo.svg',
-                    width: 60.0,
-                    height: 60.0,
-                    fit: BoxFit.cover,
-                    alignment: const Alignment(0.0, 0.0),
-                  ),
+                child: SvgPicture.asset(
+                  'assets/images/Logo.svg',
+                  width: 60.0,
+                  height: 60.0,
+                  fit: BoxFit.contain,
                 ),
               ),
             ],
