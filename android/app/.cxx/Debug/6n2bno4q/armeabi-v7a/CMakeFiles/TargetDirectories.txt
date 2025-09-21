@@ -1,0 +1,2 @@
+C:/Novatio/repara_gym/android/app/.cxx/Debug/6n2bno4q/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Novatio/repara_gym/android/app/.cxx/Debug/6n2bno4q/armeabi-v7a/CMakeFiles/rebuild_cache.dir

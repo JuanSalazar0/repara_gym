@@ -176,6 +176,18 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             });
             // Aquí puedes agregar la lógica de navegación
             print('Navegando a índice: $index');
+            if (index == 0) {
+              context.go('/homePage');
+            }
+            if (index == 1) {
+              context.go('/historialpage');
+            }
+            if (index == 2) {
+              context.go('/descargadospage');
+            }
+            if (index == 3) {
+              context.go('/perfilpage');
+            }
           },
           items: const [
             BottomNavigationBarItem(
@@ -292,7 +304,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           padding: const EdgeInsets.all(7.0),
                           child: FFButtonWidget(
                             onPressed: () {
-                              print('Button pressed ...');
+                              print('Eliptica!!!! ...');
                             },
                             text: 'Eliptica',
                             icon: const Icon(
@@ -340,6 +352,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           child: FFButtonWidget(
                             onPressed: () {
                               print('Button pressed ...');
+                              context.go('/Videodetails');
                             },
                             text: 'Bicicletas',
                             icon: const Icon(
@@ -615,6 +628,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 FFButtonWidget(
                                   onPressed: () {
                                     print('Button pressed ...');
+                                    context.go('/Videodetails');
                                   },
                                   text: '',
                                   icon: const Icon(
